@@ -10,6 +10,14 @@
     </head>
     <body>
         <h1>Jogo da Cobrinha</h1>
-        <canvas id="snake" width="512" height="512"></canvas>
+        <canvas id="snake" width="512" height="512"></canvas>        
     </body>
+    <div class="seleciona-nivel" onChange="executaJogo()">
+        <select id="selNivel">
+            <option value="0" selected>Selecione Nivel</option>
+            <option value="1">Fácil</option>
+            <option value="2">Médio</option>
+            <option value="3">Difícil</option>
+        </select>
+    </div>
 </html>

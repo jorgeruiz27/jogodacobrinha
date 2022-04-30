@@ -78,6 +78,24 @@ function iniciarJogo(){
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 100);
+let nivel;
+let jogo
 
+function executaJogo(){
+    let select = document.querySelector('#selNivel');
+    let nivel = select.options[select.selectedIndex].value;
+    if (nivel==1){
+        select.disabled = true;
+        nivel = 300;
+        jogo = setInterval(iniciarJogo, nivel);
+    }else if (nivel==2){
+        select.disabled = true;
+        nivel = 200;;
+        jogo = setInterval(iniciarJogo, nivel);
+    }else if (nivel==3){
+        select.disabled = true;
+        nivel = 100;
+        jogo = setInterval(iniciarJogo, nivel);
+    }
+}
 
